@@ -92,8 +92,7 @@ Peer-to-peer media exchange
 
 
 📸 UI Preview
-🔐 Login Screen
-<p align="center"> <img src="login.png" width="700" /> </p>
+
 💬 Real-Time Chat Interface
 <p align="center"> <img src="chat.png" width="900" /> </p>
 📞 Video Calling (WebRTC)
