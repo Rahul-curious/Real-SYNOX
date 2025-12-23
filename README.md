@@ -1,88 +1,178 @@
-# SocketGram
+🚀 Real-SYNOX
+Real-Time Chat & Video Calling Application
 
-SocketGram is a real-time chat application that allows users to join rooms by providing their username and room name. The project leverages modern web technologies to deliver a smooth and responsive chat experience.
+Real-SYNOX is a WhatsApp-inspired real-time communication platform that enables users to chat, share files, send voice messages, and make 1-to-1 video/audio calls using WebRTC.
+Built with modern web technologies for low latency, scalability, and real-time performance.
 
-## Preview
+🌐 Live Features
 
-<image src="login.png" alt="login preview" width="45%" /> <image src="chat.png" alt="chat preview" width="45%" />
+🔐 Join chat rooms using username & room ID
 
-## Features
+💬 Real-time messaging (Socket.IO)
 
-- **Real-time messaging**
-- **Room-based chat**
-- **User-friendly interface**
+✍️ Typing indicators
 
-## Technologies Used
+👁️ Message seen / delivered status
 
-### Frontend
+📎 File & image sharing
 
-- **Framework**: Vite (React + TypeScript)
-- **Styling**: Tailwind CSS
+🎙️ Voice message recording
 
-### Backend
+📞 Audio calling
 
-- **Server**: Node.js
-- **Framework**: Express
-- **Real-time Communication**: Socket.IO
-- **Cross-Origin Resource Sharing**: CORS
+🎥 Video calling (WebRTC)
 
-## Environment Configuration
+❌ Call accept / reject / end (WhatsApp-style popup)
 
-### Server
+🟢 Online users list
 
-In the `server` folder, there is a `.env` file where you can set the following variables:
+🛠️ Tech Stack
+Frontend
 
-- `PORT`: The port on which the server will run (default is `3001`).
+React + TypeScript
 
-- `CORS_ORIGIN`: The origin allowed by CORS (default is `http://localhost:5173`).
+Vite
 
-### Client
+Tailwind CSS
 
-In the `client` folder, there is a `.env.local` file where you can set the following variables:
+Socket.IO Client
 
-- `PORT`: The port where the server is running (default is `3001`).
-- `VITE_SERVER_URL`: The URL of the server if it is deployed somewhere other than the local machine (default is `http://localhost:3001`).
+WebRTC (RTCPeerConnection, ICE, STUN)
 
-## Setup and Installation
+MediaRecorder API
 
-### Installation steps
+Backend
 
-1. Clone the repository
-    ```bash
-    git clone https://github.com/kelvinleandro/react-chat-websocket.git
-    cd react-chat-websocket
-    ```
+Node.js
 
-2. Install dependencies for the frontend
-    ```bash
-    cd client
-    npm install
-    ```
+Express
 
-2. Install dependencies for the backend
-    ```bash
-    cd ../server
-    npm install
-    ```
+Socket.IO
 
-### Running the Application
+WebRTC signaling (offer / answer / ICE)
 
-1. Start the backend server
-    ```bash
-    cd server
-    npm start
-    ```
-    The server will start on `http://localhost:3001`.
+Dev & Tooling
 
-2. Start the frontend development server
-    ```bash
-    cd ../client
-    npm run dev
-    ```
-    The frontend will start on `http://localhost:5173`.
+ESLint
 
-## Usage
+Git & GitHub
 
-1. Open your browser and navigate to http://localhost:5173.
-2. Enter a username and room name to join a chat room.
-3. Start chatting in real-time!
+dotenv (environment configs)
+
+🧠 Architecture Overview
+Client (React + TS)
+   |
+   |  WebSocket (Socket.IO)
+   |
+Server (Node + Express)
+   |
+   |  WebRTC Signaling
+   |
+Peer-to-Peer Video / Audio
+
+
+Socket.IO handles:
+
+Chat messages
+
+Typing events
+
+Call signaling
+
+WebRTC handles:
+
+Real video/audio streaming
+
+Peer-to-peer media exchange  
+
+![React](https://img.shields.io/badge/React-18-blue)
+![TypeScript](https://img.shields.io/badge/TypeScript-5-blue)
+![WebRTC](https://img.shields.io/badge/WebRTC-RealTime-green)
+![Socket.IO](https://img.shields.io/badge/Socket.IO-Realtime-black)
+
+
+📸 UI Preview
+🔐 Login Screen
+<p align="center"> <img src="login.png" width="700" /> </p>
+💬 Real-Time Chat Interface
+<p align="center"> <img src="chat.png" width="900" /> </p>
+📞 Video Calling (WebRTC)
+<p align="center"> <img src="videocall.png" width="900" /> </p>
+⚙️ Environment Variables
+Client (client/.env.local)
+VITE_SERVER_URL=http://localhost:3001
+
+Server (server/.env)
+PORT=3001
+
+
+✅ .env files are ignored via .gitignore for security.
+
+🚀 Getting Started
+1️⃣ Clone Repository
+git clone https://github.com/<your-username>/Real-SYNOX.git
+cd Real-SYNOX
+
+2️⃣ Start Server
+cd server
+npm install
+npm start
+
+
+Server runs on:
+http://localhost:3001
+
+3️⃣ Start Client
+cd client
+npm install
+npm run dev
+
+
+Client runs on:
+http://localhost:5173
+
+🧪 Tested Scenarios
+
+Multiple users in same room
+
+Call accept / reject handling
+
+Reconnect on refresh
+
+Call end sync between peers
+
+📌 Future Enhancements
+
+Group video calls
+
+Chat history persistence (DB)
+
+Authentication (JWT / OAuth)
+
+Screen sharing
+
+Mobile responsiveness
+
+TURN server for NAT traversal
+
+👨‍💻 Author
+
+Rahul Prakash
+
+GitHub: https://github.com/Rahul-curious
+
+LinkedIn: https://www.linkedin.com/in/rahul-prakash-774b0a289/
+
+⭐ Support
+
+If you found this project useful:
+
+⭐ Star the repo
+
+🍴 Fork it
+
+📢 Share it
+
+📄 License
+
+This project is licensed under the MIT License.
