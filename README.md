@@ -29,7 +29,7 @@ Built with modern web technologies for low latency, scalability, and real-time p
 🛠️ Tech Stack
 Frontend
 
-React + TypeScript
+React + JavaScript
 
 Vite
 
